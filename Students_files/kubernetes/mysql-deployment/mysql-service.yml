@@ -6,7 +6,7 @@ metadata:
     name: mysql-service
 spec:
   selector:
-    name: mysql-pod
+    name: mysql-pod   # Pod un label i yakalayacak. Servisler podlari yakalar deploymentlari degil
   ports:
     - port: 3306
       targetPort: 3306

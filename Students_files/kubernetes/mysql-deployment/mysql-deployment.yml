@@ -13,7 +13,7 @@ spec:
     metadata:
       name: mysql-pod
       labels:
-        name: mysql-pod
+        name: mysql-pod   # Service bu pod u yakalicak. Servslerler podlari yakalr deploymentlari degil
     spec:
       containers:
       - name: mysql
@@ -42,3 +42,12 @@ spec:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
           claimName: mysql-pv-claim
+#        env:
+#        - name: MYSQL_ROOT_PASSWORD
+#          value: "R1234r"
+#        - name: MYSQL_USER
+#          value: "clarus"
+#        - name: MYSQL_PASSWORD
+#          value: "Clarusway_1"
+#        - name: MYSQL_DATABASE
+#          value: "phonebook"

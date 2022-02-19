@@ -13,11 +13,11 @@ spec:
     metadata:
       name: phonebook-app-pod
       labels:
-        name: phonebook-app-pod
+        name: phonebook-app-pod # service pod u bu labeldan yakalar
     spec:
       containers:
       - name: phonebook-app
-        image: serkangumus06/phonebook-main
+        image: abdullah1606/phonebook-main
         ports:
         - containerPort: 80
         env:
@@ -29,3 +29,13 @@ spec:
         envFrom: 
           - configMapRef:
               name: servers-configmap
+#       env:
+#        - name: MYSQL_USER
+#          value: "clarus"
+#        - name: MYSQL_PASSWORD
+#          value: "Clarsuway_1"              
+#        - name: MYSQL_DATABASE
+#          value: "phonebook"      
+#        - name: MYSQL_DATABASE_HOST
+#          value: "mysql-service.default.svc.cluster.local"   bu mysql servisin adi, default namespace adi.
+#Eger bir RDS olsaydi onun entrypoint olcakti value kismina!!!             
